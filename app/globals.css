@@ -1,21 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
 
+/* global.css */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-nunito: 'Nunito', sans-serif;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-nunito);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
 }
+
+.bg-primary {
+  background-color: #FFFFFF; /* white as background */
+}
+
+.text-primary {
+  color: #FFFFFF; /* white as primary font color */
+}
+
+.text-secondary {
+  color: #000000; /* black as secondary font color */
+}
+
