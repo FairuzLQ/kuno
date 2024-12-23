@@ -18,27 +18,63 @@ export default function Footer() {
           {/* Second Column (Beranda, How To, What Is) */}
           <div className="col-span-1 md:col-span-1 px-4 sm:ml-0 md:ml-10">
             <ul className="space-y-2">
-              <li><a href="/" className="text-black">Beranda</a></li>
-              <li><a href="/kategori/how-to" className="text-black">How To</a></li>
-              <li><a href="/kategori/what-is" className="text-black">What Is</a></li>
+              <li>
+                <a href="/" className="text-black hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">
+                  Beranda
+                </a>
+              </li>
+              <li>
+                <a href="/kategori/how-to" className="text-black hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">
+                  How To
+                </a>
+              </li>
+              <li>
+                <a href="/kategori/what-is" className="text-black hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">
+                  What Is
+                </a>
+              </li>
             </ul>
           </div>
   
           {/* Third Column (Overview, Tech News, Sitemap) */}
           <div className="col-span-1 md:col-span-1 px-4 sm:ml-0 md:ml-10">
             <ul className="space-y-2">
-              <li><a href="/kategori/overview" className="text-black">Overview</a></li>
-              <li><a href="/kategori/tech-news" className="text-black">Tech News</a></li>
-              <li><a href="/sitemap" className="text-black">Sitemap</a></li>
+              <li>
+                <a href="/kategori/overview" className="text-black hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">
+                  Overview
+                </a>
+              </li>
+              <li>
+                <a href="/kategori/tech-news" className="text-black hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">
+                  Tech News
+                </a>
+              </li>
+              <li>
+                <a href="/sitemap" className="text-black hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">
+                  Sitemap
+                </a>
+              </li>
             </ul>
           </div>
   
           {/* Fourth Column (Syarat dan Ketentuan, Kebijakan Privasi, Kontak) */}
           <div className="col-span-1 md:col-span-1 px-4 sm:ml-0 md:ml-10">
             <ul className="space-y-2">
-              <li><a href="/syarat-ketentuan" className="text-black">Syarat dan Ketentuan</a></li>
-              <li><a href="/kebijakan-privasi" className="text-black">Kebijakan Privasi</a></li>
-              <li><a href="/kontak" className="text-black">Kontak</a></li>
+              <li>
+                <a href="/syarat-ketentuan" className="text-black hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">
+                  Syarat dan Ketentuan
+                </a>
+              </li>
+              <li>
+                <a href="/kebijakan-privasi" className="text-black hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">
+                  Kebijakan Privasi
+                </a>
+              </li>
+              <li>
+                <a href="/kontak" className="text-black hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">
+                  Kontak
+                </a>
+              </li>
             </ul>
           </div>
         </div>
