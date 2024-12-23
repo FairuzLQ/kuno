@@ -39,8 +39,9 @@ export default function ResponsiveNavbar() {
           <Image
             src="/logo/logo-kuno.png"
             alt="Logo"
-            width={300}
+            width={300} // Default size for large screens
             height={80}
+            className="md:w-[200px]" // Reduce size of logo for tablets and larger
           />
         </div>
 
@@ -67,7 +68,7 @@ export default function ResponsiveNavbar() {
       <div className="border-t-[2px] border-[#F5F5F5] mb-4"></div>
 
       {/* Categories (Desktop) */}
-      <div className="hidden md:flex gap-[75px] text-[18px]">
+      <div className="hidden md:flex gap-[75px] text-[18px] md:gap-[40px]">
         <a href="/" className="hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">Beranda</a>
         <a href="/kategori/how-to" className="hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">How To</a>
         <a href="/kategori/what-is" className="hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">What Is</a>
