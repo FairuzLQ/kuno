@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation'; // Import useRouter for navigation
-import { FiSearch, FiMenu } from 'react-icons/fi'; // Import search and menu icons
+import { useRouter } from 'next/navigation';
+import { FiSearch } from 'react-icons/fi';
 
 export default function ResponsiveNavbar() {
   const [day, setDay] = useState('');
   const [restOfDate, setRestOfDate] = useState('');
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // For toggling mobile menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const router = useRouter();
 
@@ -26,12 +26,12 @@ export default function ResponsiveNavbar() {
 
   return (
     <nav className="bg-white text-black p-4 px-[100px]">
-      {/* First Row: Date, Logo, Search Bar */}
+      {/* First Row */}
       <div className="flex justify-between items-center mb-4">
-        {/* Date (Desktop) */}
+        {/* Date */}
         <div className="hidden md:flex flex-col text-sm text-left">
-          <strong className="w-full">{day},</strong> {/* First line */}
-          <span className="w-full">{restOfDate}</span> {/* Second line */}
+          <strong>{day},</strong>
+          <span>{restOfDate}</span>
         </div>
 
         {/* Logo */}
@@ -39,13 +39,13 @@ export default function ResponsiveNavbar() {
           <Image
             src="/logo/logo-kuno.png"
             alt="Logo"
-            width={300} // Default size for large screens
+            width={300}
             height={80}
-            className="md:w-[200px]" // Reduce size of logo for tablets and larger
+            className="md:w-[200px]"
           />
         </div>
 
-        {/* Search Bar for Desktop */}
+        {/* Search Bar */}
         <div
           className="hidden md:flex items-center gap-2 border px-6 py-2 rounded-lg cursor-pointer w-[240px]"
           onClick={() => router.push('/search')}
@@ -54,15 +54,14 @@ export default function ResponsiveNavbar() {
           <span>Search...</span>
         </div>
 
-        {/* Hamburger Icon for Mobile/Tablet */}
+        {/* Hamburger Icon */}
         <div
-          className="md:hidden flex flex-col items-center cursor-pointer relative"
+          className="md:hidden flex flex-col items-center cursor-pointer"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {/* Hamburger Lines */}
           <div
             className={`w-8 h-0.5 bg-black transition-all duration-300 ${
-              isMenuOpen ? 'rotate-45 absolute top-0' : 'mb-2'
+              isMenuOpen ? 'rotate-45 translate-y-[6px]' : 'mb-2'
             }`}
           />
           <div
@@ -72,16 +71,16 @@ export default function ResponsiveNavbar() {
           />
           <div
             className={`w-8 h-0.5 bg-black transition-all duration-300 ${
-              isMenuOpen ? '-rotate-45 absolute bottom-0' : 'mt-2'
+              isMenuOpen ? '-rotate-45 -translate-y-[6px]' : 'mt-2'
             }`}
           />
         </div>
       </div>
 
-      {/* Separator Line */}
+      {/* Separator */}
       <div className="border-t-[2px] border-[#F5F5F5] mb-4"></div>
 
-      {/* Categories (Desktop) */}
+      {/* Desktop Categories */}
       <div className="hidden md:flex gap-[75px] text-[18px] md:gap-[40px]">
         <a href="/" className="hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">Beranda</a>
         <a href="/kategori/how-to" className="hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">How To</a>
@@ -90,35 +89,37 @@ export default function ResponsiveNavbar() {
         <a href="/kategori/tech-news" className="hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">Tech News</a>
       </div>
 
-      {/* Mobile/Tablet Menu (Dropdown) */}
-      {isMenuOpen && (
-        <div className="md:hidden flex flex-col items-center mt-4 space-y-4">
-          {/* Date (Mobile) */}
-          <span className="text-sm text-left">
-            <strong className="block">{day},</strong>
-            <span>{restOfDate}</span>
-          </span>
+      {/* Mobile/Tablet Menu with Animation */}
+      <div
+        className={`md:hidden flex flex-col items-center mt-4 space-y-4 transition-all duration-300 overflow-hidden ${
+          isMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        {/* Date */}
+        <span className="text-sm text-left">
+          <strong className="block">{day},</strong>
+          <span>{restOfDate}</span>
+        </span>
 
-          {/* Search Bar (Mobile) */}
-          <div
-            className="px-4 py-2 border rounded-md w-64 cursor-pointer text-gray-500 flex items-center gap-2"
-            style={{ borderRadius: '15px' }}
-            onClick={() => router.push('/search')}
-          >
-            <FiSearch className="text-gray-400" size={20} /> {/* Search Icon */}
-            <span>Search...</span>
-          </div>
-
-          {/* Categories (Mobile) */}
-          <div className="flex flex-col items-center gap-4 text-[18px]">
-            <a href="/" className="hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">Beranda</a>
-            <a href="/kategori/how-to" className="hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">How To</a>
-            <a href="/kategori/what-is" className="hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">What Is</a>
-            <a href="/kategori/overview" className="hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">Overview</a>
-            <a href="/kategori/tech-news" className="hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">Tech News</a>
-          </div>
+        {/* Search Bar */}
+        <div
+          className="px-4 py-2 border rounded-md w-64 cursor-pointer text-gray-500 flex items-center gap-2"
+          style={{ borderRadius: '15px' }}
+          onClick={() => router.push('/search')}
+        >
+          <FiSearch className="text-gray-400" size={20} />
+          <span>Search...</span>
         </div>
-      )}
+
+        {/* Categories */}
+        <div className="flex flex-col items-center gap-4 text-[18px]">
+          <a href="/" className="hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">Beranda</a>
+          <a href="/kategori/how-to" className="hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">How To</a>
+          <a href="/kategori/what-is" className="hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">What Is</a>
+          <a href="/kategori/overview" className="hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">Overview</a>
+          <a href="/kategori/tech-news" className="hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">Tech News</a>
+        </div>
+      </div>
     </nav>
   );
 }
