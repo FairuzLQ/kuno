@@ -55,11 +55,25 @@ export default function ResponsiveNavbar() {
         </div>
 
         {/* Hamburger Icon for Mobile/Tablet */}
-        <div className="md:hidden flex items-center">
-          <FiMenu 
-            className="cursor-pointer" 
-            size={24} 
-            onClick={() => setIsMenuOpen(!isMenuOpen)} 
+        <div
+          className="md:hidden flex flex-col items-center cursor-pointer relative"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {/* Hamburger Lines */}
+          <div
+            className={`w-8 h-0.5 bg-black transition-all duration-300 ${
+              isMenuOpen ? 'rotate-45 absolute top-0' : 'mb-2'
+            }`}
+          />
+          <div
+            className={`w-8 h-0.5 bg-black transition-all duration-300 ${
+              isMenuOpen ? 'opacity-0' : ''
+            }`}
+          />
+          <div
+            className={`w-8 h-0.5 bg-black transition-all duration-300 ${
+              isMenuOpen ? '-rotate-45 absolute bottom-0' : 'mt-2'
+            }`}
           />
         </div>
       </div>
