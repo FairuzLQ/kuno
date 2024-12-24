@@ -3,9 +3,9 @@ import { FaAngleRight } from "react-icons/fa"; // Import angle right icon from r
 
 export default function LatestArticles() {
   return (
-    <div className="p-8 sm:p-20">
+    <div className="p-0 sm:p-8 md:p-20">
       {/* Title Section */}
-      <div className="flex items-center gap-4 mb-8 mt-[-100px]">
+      <div className="flex items-center gap-4 mb-8 mt-[-20px] sm:mt-[-30px] md:mt-[-100px]">
         {/* Wrapper for text and arrow for the hover effect */}
         <a
           href="#"
@@ -24,10 +24,10 @@ export default function LatestArticles() {
       </div>
 
       {/* Articles Layout */}
-      <div className="grid grid-cols-[55%_45%] gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-[55%_45%] gap-8">
         {/* Left Section: Main Article */}
         <div
-          className="relative bg-cover bg-center h-[350px]"
+          className="relative bg-cover bg-center h-[350px] md:h-[350px]"
           style={{ backgroundImage: "url('https://via.placeholder.com/540x350')" }}
         >
           {/* Category Badge */}
@@ -47,15 +47,15 @@ export default function LatestArticles() {
           {[1, 2, 3].map((_, index) => (
             <div key={index} className="flex items-start gap-4">
               <div
-                className="w-[120px] h-[90px] bg-gray-300 bg-cover bg-center"
-                style={{ backgroundImage: "url('https://via.placeholder.com/120x90')" }}
+                className="w-[125px] h-[100px] bg-gray-300 bg-cover bg-center"
+                style={{ backgroundImage: "url('https://via.placeholder.com/125x100')" }}
               ></div>
               <div className="flex-1">
-                <div className="flex justify-between text-[14px] text-gray-500">
-                  <span className="font-medium text-[16px]">Category</span>
+                <div className="flex justify-between text-[12px] text-gray-500">
+                  <span className="font-medium text-[14px]">Category</span>
                   <span>December 24, 2024</span>
                 </div>
-                <h3 className="text-[20px] font-bold mt-2">Judul Tes Lorem Ipsum Dono Kasino Indro</h3>
+                <h3 className="text-[18px] font-bold mt-2">Judul Tes Lorem Ipsum Dono Kasino Indro</h3>
               </div>
             </div>
           ))}
