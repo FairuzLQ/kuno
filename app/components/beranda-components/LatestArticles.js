@@ -5,7 +5,7 @@ export default function LatestArticles() {
   return (
     <div className="p-8 sm:p-20">
       {/* Title Section */}
-      <div className="flex items-center gap-4 mb-8">
+      <div className="flex items-center gap-4 mb-8 mt-[-100px]">
         <a
           href="#"
           className="text-2xl font-bold relative hover:text-gray-700"
