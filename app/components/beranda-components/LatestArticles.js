@@ -27,17 +27,17 @@ export default function LatestArticles() {
       <div className="grid grid-cols-[55%_45%] gap-8">
         {/* Left Section: Main Article */}
         <div
-          className="relative bg-cover bg-center h-96"
-          style={{ backgroundImage: "url('https://via.placeholder.com/600x400')" }}
+          className="relative bg-cover bg-center h-[350px]"
+          style={{ backgroundImage: "url('https://via.placeholder.com/540x350')" }}
         >
           {/* Category Badge */}
-          <div className="absolute top-4 left-4 bg-white text-black text-xs font-medium px-2 py-1 rounded">
-            Category
+          <div className="absolute top-0 left-0 bg-white text-black text-[16px] font-medium px-2 py-1">
+            How To
           </div>
           {/* Date and Title */}
-          <div className="absolute bottom-4 left-4 text-white space-y-2">
-            <p className="text-xs">December 24, 2024</p>
-            <h2 className="text-xl font-bold">Title of the Main Article</h2>
+          <div className="absolute bottom-4 left-4 text-black space-y-2">
+            <p className="text-[14px] px-5">December 24, 2024</p>
+            <h2 className="text-[28px] font-bold px-5">Title of the Main Article Tes</h2>
           </div>
         </div>
 
@@ -47,15 +47,15 @@ export default function LatestArticles() {
           {[1, 2, 3].map((_, index) => (
             <div key={index} className="flex items-start gap-4">
               <div
-                className="w-24 h-24 bg-gray-300 bg-cover bg-center"
-                style={{ backgroundImage: "url('https://via.placeholder.com/100x100')" }}
+                className="w-[120px] h-[90px] bg-gray-300 bg-cover bg-center"
+                style={{ backgroundImage: "url('https://via.placeholder.com/120x90')" }}
               ></div>
               <div className="flex-1">
-                <div className="flex justify-between text-xs text-gray-500">
-                  <span className="font-medium">Category</span>
+                <div className="flex justify-between text-[14px] text-gray-500">
+                  <span className="font-medium text-[16px]">Category</span>
                   <span>December 24, 2024</span>
                 </div>
-                <h3 className="text-sm font-bold mt-2">Title of the Small Article</h3>
+                <h3 className="text-[20px] font-bold mt-2">Judul Tes Lorem Ipsum Dono Kasino Indro</h3>
               </div>
             </div>
           ))}
