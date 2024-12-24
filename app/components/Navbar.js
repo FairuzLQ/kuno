@@ -25,7 +25,7 @@ export default function ResponsiveNavbar() {
   }, []);
 
   return (
-    <nav className="bg-white text-black p-4 px-[100px]">
+    <nav className="bg-white text-black p-4 px-[100px] mb-0">
       {/* First Row */}
       <div className="flex justify-between items-center mb-4">
         {/* Date */}
