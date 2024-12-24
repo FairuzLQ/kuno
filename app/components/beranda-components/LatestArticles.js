@@ -1,27 +1,30 @@
 import React from "react";
-import { FaArrowRight } from "react-icons/fa"; // Import arrow icon from react-icons
+import { FaAngleRight } from "react-icons/fa"; // Import angle right icon from react-icons
 
 export default function LatestArticles() {
   return (
     <div className="p-8 sm:p-20">
       {/* Title Section */}
       <div className="flex items-center gap-4 mb-8 mt-[-100px]">
+        {/* Wrapper for text and arrow for the hover effect */}
         <a
           href="#"
-          className="text-2xl font-bold relative hover:text-gray-700"
+          className="flex items-center gap-4 text-2xl font-bold relative hover:text-gray-700 transition-all duration-200 transform hover:scale-105"
         >
-          Latest Articles
-          {/* Modern Half Underline */}
-          <span className="absolute bottom-[-10px] left-0 w-20 h-[2px] bg-black"></span>
+          <span className="text-[28px]">
+            Latest Articles
+            {/* Modern Half Underline */}
+            <span className="absolute bottom-[-10px] left-0 w-24 h-[2px] bg-black"></span>
+          </span>
+          {/* Modern Arrow */}
+          <div className="w-[35px] h-[35px] border-2 border-black rounded-full flex items-center justify-center transition-all duration-200 transform hover:scale-105">
+            <FaAngleRight className="text-black" />
+          </div>
         </a>
-        {/* Modern Arrow */}
-        <div className="w-10 h-10 border-2 border-black rounded-full flex items-center justify-center">
-          <FaArrowRight className="text-black" />
-        </div>
       </div>
 
       {/* Articles Layout */}
-      <div className="grid grid-cols-[60%_40%] gap-8">
+      <div className="grid grid-cols-[55%_45%] gap-8">
         {/* Left Section: Main Article */}
         <div
           className="relative bg-cover bg-center h-96"
