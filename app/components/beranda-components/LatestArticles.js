@@ -5,7 +5,7 @@ export default function LatestArticles() {
   return (
     <div className="p-0 sm:p-8 md:p-20">
       {/* Title Section */}
-      <div className="flex items-center gap-4 mb-8 mt-[-20px] sm:mt-[-30px] md:mt-[-100px]">
+      <div className="flex items-center gap-4 mb-8 mt-[-20px] sm:mt-[-70px] md:mt-[-100px]">
         {/* Wrapper for text and arrow for the hover effect */}
         <a
           href="#"
@@ -24,10 +24,10 @@ export default function LatestArticles() {
       </div>
 
       {/* Articles Layout */}
-      <div className="grid grid-cols-1 md:grid-cols-[55%_45%] gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-8">
         {/* Left Section: Main Article */}
         <div
-          className="relative bg-cover bg-center h-[350px] md:h-[350px]"
+          className="relative bg-cover bg-center h-[350px] lg:h-[350px]"
           style={{ backgroundImage: "url('https://via.placeholder.com/540x350')" }}
         >
           {/* Category Badge */}

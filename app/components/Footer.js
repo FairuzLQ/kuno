@@ -1,9 +1,9 @@
 export default function Footer() {
     return (
-      <footer className="bg-white text-black pt-8 pb-20 px-12">
+      <footer className="bg-white text-black pt-8 pb-20 px-8">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* First Column (Logo and Slogan) */}
-          <div className="col-span-1 md:col-span-1 flex flex-col px-4 sm:ml-0 md:ml-10">
+          <div className="col-span-1 md:col-span-1 flex flex-col px-4 sm:ml-0 md:ml-3 lg:ml-12">
             {/* Logo */}
             <div className="mb-4">
               <img src="/logo/logo-kuno-footer.png" alt="Kupas Tekno Logo" className="w-[200px]" />
@@ -16,7 +16,7 @@ export default function Footer() {
           </div>
   
           {/* Second Column (Beranda, How To, What Is) */}
-          <div className="col-span-1 md:col-span-1 px-4 sm:ml-0 md:ml-10">
+          <div className="col-span-1 md:col-span-1 px-4 sm:ml-0 md:ml-3 lg:ml-10">
             <ul className="space-y-2">
               <li>
                 <a href="/" className="text-black hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
   
           {/* Third Column (Overview, Tech News, Sitemap) */}
-          <div className="col-span-1 md:col-span-1 px-4 sm:ml-0 md:ml-10">
+          <div className="col-span-1 md:col-span-1 px-4 sm:ml-0 md:ml-3 lg:ml-10">
             <ul className="space-y-2">
               <li>
                 <a href="/kategori/overview" className="text-black hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">
@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
   
           {/* Fourth Column (Syarat dan Ketentuan, Kebijakan Privasi, Kontak) */}
-          <div className="col-span-1 md:col-span-1 px-4 sm:ml-0 md:ml-10">
+          <div className="col-span-1 md:col-span-1 px-4 sm:ml-0 md:ml-3 lg:ml-10">
             <ul className="space-y-2">
               <li>
                 <a href="/syarat-ketentuan" className="text-black hover:bg-gray-200 px-2 py-1 rounded-lg transition-colors">
