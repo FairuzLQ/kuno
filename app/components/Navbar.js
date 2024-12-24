@@ -5,6 +5,11 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { FiSearch } from 'react-icons/fi';
 
+// Skeleton loader for the date
+const SkeletonDate = () => (
+  <div className="w-24 h-5 bg-gray-300 rounded-md animate-pulse"></div>
+);
+
 export default function ResponsiveNavbar() {
   const [day, setDay] = useState('');
   const [restOfDate, setRestOfDate] = useState('');
@@ -30,8 +35,14 @@ export default function ResponsiveNavbar() {
       <div className="flex justify-between items-center mb-4">
         {/* Date */}
         <div className="hidden md:flex flex-col text-sm text-left">
-          <strong>{day},</strong>
-          <span>{restOfDate}</span>
+          {day ? (
+            <>
+              <strong>{day},</strong>
+              <span>{restOfDate}</span>
+            </>
+          ) : (
+            <SkeletonDate />
+          )}
         </div>
 
         {/* Logo */}
@@ -97,8 +108,14 @@ export default function ResponsiveNavbar() {
       >
         {/* Date */}
         <span className="text-sm text-left">
-          <strong className="block">{day},</strong>
-          <span>{restOfDate}</span>
+          {day ? (
+            <>
+              <strong className="block">{day},</strong>
+              <span>{restOfDate}</span>
+            </>
+          ) : (
+            <SkeletonDate />
+          )}
         </span>
 
         {/* Search Bar */}
