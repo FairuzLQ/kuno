@@ -2,6 +2,7 @@ import LatestArticles from "./components/beranda-components/LatestArticles";
 import FourArticlesPick from './components/beranda-components/FourArticlesPick';
 import InsightArticles from "./components/beranda-components/InsightArticles";
 import TwoCategoryPick from "./components/beranda-components/TwoCategoryPick";
+import SliderArticles from "./components/beranda-components/SliderArticles";
 
 export default function Beranda() {
   return (
@@ -12,6 +13,7 @@ export default function Beranda() {
       </div>
       <InsightArticles />
       <TwoCategoryPick/>
+      <SliderArticles />
     </div>
   );
 }
