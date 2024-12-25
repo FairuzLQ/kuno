@@ -41,7 +41,7 @@ export default function TwoCategoryPick() {
       <div className="md:border-t-[2px] border-[#F5F5F5] mb-4"></div>
 
       {/* Content with 3 Columns Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 gap-0 xl:grid-cols-3 xl:gap-[200px]">
         {/* First Column */}
         <div className="space-y-4">
           {/* Title */}
@@ -62,60 +62,66 @@ export default function TwoCategoryPick() {
 
           {/* Image and Article Title */}
           <div className="space-y-4">
-            {loading
-              ? (
-                <div className="w-[340px] h-[180px] bg-gray-200 mb-4 animate-pulse"></div> // Image Skeleton
-              )
-              : (
-                <div className="w-[340px] h-[180px] bg-cover bg-center mb-4" style={{ backgroundImage: `url(${articles[0].image})` }}></div>
-              )}
+            {loading ? (
+              <div className="w-[340px] h-[180px] bg-gray-200 mb-4 animate-pulse"></div> // Image Skeleton
+            ) : (
+              <Link href={articles[0].link}>
+                <div className="w-[340px] h-[180px] bg-cover bg-center mb-4 transition-transform transform hover:scale-105" style={{ backgroundImage: `url(${articles[0].image})` }}></div>
+              </Link> // Image with hover effect
+            )}
 
-            {loading
-              ? (
+            <div className="my-2">
+              {loading ? (
                 <h4 className="text-black text-[24px] font-bold bg-gray-200 h-6 w-[200px] animate-pulse mb-2"></h4> // Title Skeleton
-              )
-              : (
-                <h4 className="text-black text-[24px] font-bold">{articles[0].title}</h4>
+              ) : (
+                <Link href={articles[0].link} className="text-black text-[24px] font-bold hover:text-gray-500 transition-colors duration-300">
+                  {articles[0].title}
+                </Link> // Title with hover effect
               )}
-            
-            {loading
-              ? (
-                <p className="text-black text-[14px] bg-gray-200 h-4 w-[300px] animate-pulse mb-4"></p> // Excerpt Skeleton
-              )
-              : (
-                <p className="text-black text-[14px]">{articles[0].excerpt}</p>
-              )}
+            </div>
+
+            {loading ? (
+              <p className="text-black text-[14px] bg-gray-200 h-4 w-[300px] animate-pulse mb-4"></p> // Excerpt Skeleton
+            ) : (
+              <p className="text-black text-[14px] my-4">{articles[0].excerpt}</p>
+            )}
 
             <div className="border-t-[1px] border-[#F5F5F5] my-4"></div>
 
             {/* Article Titles */}
-            {loading
-              ? (
-                <h5 className="text-black text-[20px] font-bold bg-gray-200 h-6 w-[200px] animate-pulse mb-2"></h5> // Article Title Skeleton
-              )
-              : (
-                <h5 className="text-black text-[20px] font-bold">{articles[0].title}</h5>
-              )}
+            {loading ? (
+              <h5 className="text-black text-[20px] font-bold bg-gray-200 h-6 w-[200px] animate-pulse mb-2"></h5> // Article Title Skeleton
+            ) : (
+              <div className="my-2 hover:scale-105 transition-all duration-300">
+                <Link href={articles[0].link} className="text-black text-[20px] font-bold my-2 hover:text-gray-500 transition-colors duration-300">
+                  {articles[0].title}
+                </Link>
+              </div>
+            )}
 
             <div className="border-t-[1px] border-[#F5F5F5] my-2"></div>
 
-            {loading
-              ? (
-                <h5 className="text-black text-[20px] font-bold bg-gray-200 h-6 w-[200px] animate-pulse mb-2"></h5> // Article Title Skeleton
-              )
-              : (
-                <h5 className="text-black text-[20px] font-bold">{articles[1].title}</h5>
-              )}
+            {loading ? (
+              <h5 className="text-black text-[20px] font-bold bg-gray-200 h-6 w-[200px] animate-pulse mb-2"></h5> // Article Title Skeleton
+            ) : (
+              <div className="my-2 hover:scale-105 transition-all duration-300">
+                <Link href={articles[0].link} className="text-black text-[20px] font-bold my-2 hover:text-gray-500 transition-colors duration-300">
+                  {articles[0].title}
+                </Link>
+              </div>
+            )}
 
             <div className="border-t-[1px] border-[#F5F5F5] my-2"></div>
 
-            {loading
-              ? (
-                <h5 className="text-black text-[20px] font-bold bg-gray-200 h-6 w-[200px] animate-pulse mb-2"></h5> // Article Title Skeleton
-              )
-              : (
-                <h5 className="text-black text-[20px] font-bold">{articles[1].title}</h5>
-              )}
+            {loading ? (
+              <h5 className="text-black text-[20px] font-bold bg-gray-200 h-6 w-[200px] animate-pulse mb-2"></h5> // Article Title Skeleton
+            ) : (
+              <div className="my-2 hover:scale-105 transition-all duration-300">
+                <Link href={articles[0].link} className="text-black text-[20px] font-bold my-2 hover:text-gray-500 transition-colors duration-300">
+                  {articles[0].title}
+                </Link>
+              </div>
+            )}
           </div>
         </div>
 
@@ -139,60 +145,66 @@ export default function TwoCategoryPick() {
 
           {/* Image and Article Title */}
           <div className="space-y-4">
-            {loading
-              ? (
-                <div className="w-[340px] h-[180px] bg-gray-200 mb-4 animate-pulse"></div> // Image Skeleton
-              )
-              : (
-                <div className="w-[340px] h-[180px] bg-cover bg-center mb-4" style={{ backgroundImage: `url(${articles[1].image})` }}></div>
-              )}
+            {loading ? (
+              <div className="w-[340px] h-[180px] bg-gray-200 mb-4 animate-pulse"></div> // Image Skeleton
+            ) : (
+              <Link href={articles[1].link}>
+                <div className="w-[340px] h-[180px] bg-cover bg-center mb-4 transition-transform transform hover:scale-105" style={{ backgroundImage: `url(${articles[1].image})` }}></div>
+              </Link> // Image with hover effect
+            )}
 
-            {loading
-              ? (
+            <div className="my-2">
+              {loading ? (
                 <h4 className="text-black text-[24px] font-bold bg-gray-200 h-6 w-[200px] animate-pulse mb-2"></h4> // Title Skeleton
-              )
-              : (
-                <h4 className="text-black text-[24px] font-bold">{articles[1].title}</h4>
+              ) : (
+                <Link href={articles[1].link} className="text-black text-[24px] font-bold hover:text-gray-500 transition-colors duration-300">
+                  {articles[1].title}
+                </Link> // Title with hover effect
               )}
+            </div>
 
-            {loading
-              ? (
-                <p className="text-black text-[14px] bg-gray-200 h-4 w-[300px] animate-pulse mb-4"></p> // Excerpt Skeleton
-              )
-              : (
-                <p className="text-black text-[14px]">{articles[1].excerpt}</p>
-              )}
+            {loading ? (
+              <p className="text-black text-[14px] bg-gray-200 h-4 w-[300px] animate-pulse mb-4"></p> // Excerpt Skeleton
+            ) : (
+              <p className="text-black text-[14px] my-4">{articles[1].excerpt}</p>
+            )}
 
             <div className="border-t-[1px] border-[#F5F5F5] my-4"></div>
 
             {/* Article Titles */}
-            {loading
-              ? (
-                <h5 className="text-black text-[20px] font-bold bg-gray-200 h-6 w-[200px] animate-pulse mb-2"></h5> // Article Title Skeleton
-              )
-              : (
-                <h5 className="text-black text-[20px] font-bold">{articles[0].title}</h5>
-              )}
+            {loading ? (
+              <h5 className="text-black text-[20px] font-bold bg-gray-200 h-6 w-[200px] animate-pulse mb-2"></h5> // Article Title Skeleton
+            ) : (
+              <div className="my-2 hover:scale-105 transition-all duration-300">
+                <Link href={articles[0].link} className="text-black text-[20px] font-bold my-2 hover:text-gray-500 transition-colors duration-300">
+                  {articles[0].title}
+                </Link>
+              </div>
+            )}
 
             <div className="border-t-[1px] border-[#F5F5F5] my-2"></div>
 
-            {loading
-              ? (
-                <h5 className="text-black text-[20px] font-bold bg-gray-200 h-6 w-[200px] animate-pulse mb-2"></h5> // Article Title Skeleton
-              )
-              : (
-                <h5 className="text-black text-[20px] font-bold">{articles[1].title}</h5>
-              )}
+            {loading ? (
+              <h5 className="text-black text-[20px] font-bold bg-gray-200 h-6 w-[200px] animate-pulse mb-2"></h5> // Article Title Skeleton
+            ) : (
+              <div className="my-2 hover:scale-105 transition-all duration-300">
+                <Link href={articles[1].link} className="text-black text-[20px] font-bold my-2 hover:text-gray-500 transition-colors duration-300">
+                  {articles[1].title}
+                </Link>
+              </div>
+            )}
 
             <div className="border-t-[1px] border-[#F5F5F5] my-2"></div>
 
-            {loading
-              ? (
-                <h5 className="text-black text-[20px] font-bold bg-gray-200 h-6 w-[200px] animate-pulse mb-2"></h5> // Article Title Skeleton
-              )
-              : (
-                <h5 className="text-black text-[20px] font-bold">{articles[1].title}</h5>
-              )}
+            {loading ? (
+              <h5 className="text-black text-[20px] font-bold bg-gray-200 h-6 w-[200px] animate-pulse mb-2"></h5> // Article Title Skeleton
+            ) : (
+              <div className="my-2 transform hover:scale-105 transition-all duration-300">
+                <Link href={articles[1].link} className="text-black text-[20px] font-bold my-2 hover:text-gray-500 transition-colors duration-300">
+                  {articles[1].title}
+                </Link>
+              </div>
+            )}
           </div>
         </div>
 
