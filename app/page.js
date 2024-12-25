@@ -5,7 +5,7 @@ import InsightArticles from "./components/beranda-components/InsightArticles";
 export default function Beranda() {
   return (
     <div >
-      <div className="p-5 sm:p-20">
+      <div className="px-5 py-5 sm:p-5 lg:px-20">
         <LatestArticles />
         <FourArticlesPick />
       </div>

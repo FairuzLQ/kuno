@@ -28,7 +28,7 @@ export default function InsightArticles() {
   }, []);
 
   return (
-    <div className="p-5 sm:p-16 md:p-40 bg-black">
+    <div className="p-5 sm:p-[90px] lg:p-40 bg-black">
       {/* Separator Line */}
       <div className="border-t-[2px] border-[#FFF] mb-4"></div>
 
