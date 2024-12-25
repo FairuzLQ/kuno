@@ -28,22 +28,22 @@ export default function InsightArticles() {
   }, []);
 
   return (
-    <div className="p-0 sm:p-8 md:p-20">
+    <div className="p-5 sm:p-16 md:p-40 bg-black">
       {/* Separator Line */}
-      <div className="border-t-[2px] border-[#F5F5F5] mb-4"></div>
+      <div className="border-t-[2px] border-[#FFF] mb-4"></div>
 
-      {/* Title Similar to the Provided Example */}
+      {/* Title */}
       <div className="flex items-center gap-4 mb-8 mt-[70px] sm:mt-[70px] md:mt-[70px]">
         <Link
           href="#"
           className="flex items-center gap-4 text-2xl font-bold relative hover:text-gray-700 transition-all duration-200 transform hover:scale-105"
         >
-          <span className="text-[28px]">
-            Pilihan Editor
-            <span className="absolute bottom-[-10px] left-0 w-24 h-[2px] bg-black"></span>
+          <span className="text-[28px] text-white">
+            Tekno Insight {/* Changed title */}
+            <span className="absolute bottom-[-10px] left-0 w-24 h-[2px] bg-white"></span>
           </span>
-          <div className="w-[35px] h-[35px] border-2 border-black rounded-full flex items-center justify-center transition-all duration-200 transform hover:scale-105">
-            <FaAngleRight className="text-black" />
+          <div className="w-[35px] h-[35px] border-2 border-white rounded-full flex items-center justify-center transition-all duration-200 transform hover:scale-105">
+            <FaAngleRight className="text-white" />
           </div>
         </Link>
       </div>
@@ -85,12 +85,12 @@ export default function InsightArticles() {
             : (
               <div key={articles[0].id} className="flex flex-col gap-4 hover:scale-105 transition-transform duration-300">
                 {/* Category with Background */}
-                <div className="w-max py-1 px-4 bg-gray-200 text-gray-700 text-sm font-medium rounded">
+                <div className="w-max py-1 px-4 bg-gray-200 text-black text-sm font-medium">
                   {articles[0].category}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-[18px] font-bold mt-2">
+                <h3 className="text-[28px] font-bold mt-2 text-white">
                   <Link
                     href={articles[0].link}
                     className="hover:text-gray-500 transition-all duration-200"
@@ -100,7 +100,9 @@ export default function InsightArticles() {
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-[14px] text-gray-600">{articles[0].excerpt}</p>
+                <p className="text-[16px] text-white">
+                  {articles[0].excerpt}
+                </p>
               </div>
             )}
         </div>

@@ -4,9 +4,11 @@ import InsightArticles from "./components/beranda-components/InsightArticles";
 
 export default function Beranda() {
   return (
-    <div className="p-5 sm:p-20">
-      <LatestArticles />
-      <FourArticlesPick />
+    <div >
+      <div className="p-5 sm:p-20">
+        <LatestArticles />
+        <FourArticlesPick />
+      </div>
       <InsightArticles />
     </div>
   );
