@@ -85,7 +85,7 @@ export default function InsightArticles() {
             : (
               <div key={articles[0].id} className="flex flex-col gap-4 hover:scale-105 transition-transform duration-300">
                 {/* Category with Background */}
-                <div className="w-max py-1 px-4 bg-gray-200 text-black text-sm font-medium">
+                <div className="w-max py-1 px-4 bg-white text-black text-sm font-medium">
                   {articles[0].category}
                 </div>
 

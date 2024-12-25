@@ -53,7 +53,7 @@ export default function FourArticlesPick() {
   return (
     <div className="p-0 sm:p-8 md:p-20">
       {/* Separator Line */}
-      <div className="border-t-[2px] border-[#F5F5F5] mb-4"></div>
+      <div className="md:border-t-[2px] border-[#F5F5F5] mb-4"></div>
 
       {/* Title Similar to the Provided Example */}
       <div className="flex items-center gap-4 mb-8 mt-[70px] sm:mt-[70px] md:mt-[70px]">

@@ -54,7 +54,7 @@ export default function LatestArticles() {
   }, []);
 
   return (
-    <div className="p-0 sm:p-8 md:p-20">
+    <div className="p-0 sm:p-8 md:p-20 mt-12">
       {/* Title Section */}
       <div className="flex items-center gap-4 mb-8 mt-[-20px] sm:mt-[-70px] md:mt-[-100px]">
         <Link
