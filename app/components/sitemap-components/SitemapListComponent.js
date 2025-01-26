@@ -83,9 +83,9 @@ const SitemapListComponent = () => {
     <div className="p-4">
       {visibleAlphabets.map((alphabet) => (
         <div key={alphabet} className="mb-12">
-          <h2 className="text-4xl font-bold mb-5">{alphabet}</h2> {/* Ukuran abjad 36px */}
+          <h2 className="text-[28px] px-5 md:px-12 lg:text-4xl lg:px-10 font-bold mb-5 ">{alphabet}</h2> {/* Ukuran abjad 36px */}
           {groupedArticles[alphabet].map((article, index) => (
-            <div key={index} className="mb-2 text-2xl"> {/* Ukuran title 28px */}
+            <div key={index} className="text-[20px] md:px-12 px-5 mb-2 lg:px-10 lg:text-2xl"> {/* Ukuran title 28px */}
               {article.title}
             </div>
           ))}
@@ -102,7 +102,7 @@ const SitemapListComponent = () => {
 
       {!loading && visibleAlphabets.length < alphabets.length && (
         <button
-          className="text-black"
+          className="text-black md:px-12 px-5 mb-2 lg:px-10"
           onClick={loadMore}
         >
           Load More...
